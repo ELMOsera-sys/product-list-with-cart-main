@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+  --color-red: hsl(14, 86%, 42%);
+  --color-green: hsl(159, 69%, 38%);
+
+  --color-rose-50: hsl(20, 50%, 98%);
+  --color-rose-100: hsl(13, 31%, 94%);
+  --color-rose-300: hsl(14, 25%, 72%);
+  --color-rose-400: hsl(7, 20%, 60%);
+  --color-rose-500: hsl(12, 20%, 44%);
+  --color-rose-900: hsl(14, 65%, 9%);
+
+  --font-sans: "Red Hat Text", sans-serif;
+      }
+      @layer utilities {
+  .text-red { color: var(--color-red); }
+  .bg-red { background-color: var(--color-red); }
+
+  .text-green { color: var(--color-green); }
+  .bg-green { background-color: var(--color-green); }
+
+  .text-rose-50 { color: var(--color-rose-50); }
+  .bg-rose-50 { background-color: var(--color-rose-50); }
+
+  .text-rose-100 { color: var(--color-rose-100); }
+  .bg-rose-100 { background-color: var(--color-rose-100); }
+
+  .text-rose-300 { color: var(--color-rose-300); }
+  .bg-rose-300 { background-color: var(--color-rose-300); }
+
+  .text-rose-400 { color: var(--color-rose-400); }
+  .bg-rose-400 { background-color: var(--color-rose-400); }
+
+  .text-rose-500 { color: var(--color-rose-500); }
+  .bg-rose-500 { background-color: var(--color-rose-500); }
+
+  .text-rose-900 { color: var(--color-rose-900); }
+  .bg-rose-900 { background-color: var(--color-rose-900); }
+}
+    </style>
+  
+  <title>Frontend Mentor | Product list with cart</title>
+</head>
+<body>
+  <main class="font-sans bg-rose-50 flex flex-col items-center gap-10 py-10 px-4 text-rose-900 relative
+  md:flex-row">
+    <section class="option-section
+      flex flex-col gap-6 md:w-[70%]">
+      <h1 class="font-bold text-5xl">Desserts</h1>
+      <div class="options-wrapper flex flex-col gap-10 md:grid md:grid-cols-3 md:grid-rows-auto ">
+        <!-- Options will be dynamically inserted here -->
+      </div>
+              
+    </section>
+    <section class="cart-section w-[80%] flex flex-col gap-10 md:w-[25%] md:self-start">
+      <h2 class="font-bold text-3xl text-red">Your Cart (<span class="total-number">0</span>)</h2>
+      <div class="cart-container-empty">
+        <img src="./assets/images/illustration-empty-cart.svg" alt="Empty Cart" class="w-full h-auto">
+        <p class="text-center text-rose-400 font-medium">Your added items will appear here</p>
+      </div>
+      <div class="flex flex-col gap-5 cart-selected hide-2 hidden md:bg-white md:p-6">
+          <!-- Selected items will be dynamically inserted here -->
+      </div>
+
+      <p class="order-total mt-6 w-full px-6 flex justify-between hide-2 hidden md:bg-white md:p-6">
+          <span class="text-rose-500">Order Total:</span> 
+        <span class="total-price text-xl font-bold">$00.00</span>
+      </p>
+        <div class="confirm-btn w-full flex flex-col items-center gap-6 hide-2 hidden">
+          <p class="text-rose-500 before:content-[url('./assets/images/icon-carbon-neutral.svg')] md:bg-white md:p-6">
+            this is a <span class="text-rose-900 font-medium">carbon neutral</span> delivery</p>
+          <button class="w-[80%] bg-red text-rose-100 font-medium py-3 rounded-full 
+          transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105
+           active:scale-95 confirm-order-btn">
+            Confirm Order
+          </button>
+        </div>
+
+    </section>
+    <div class="overlay fixed inset-0 md:bg-black/50 z-10 hidden"></div>
+    <section class="confirmation-section flex flex-col items-start gap-6 bg-white 
+    absolute w-full bottom-0 left-0 px-8 py-10 rounded-t-3xl hidden md:w-[30%] 
+    md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-20">
+      <img src="./assets/images/icon-order-confirmed.svg" alt="Order Confirmation" class="w-[80px]">
+      <h2 class="font-bold text-rose-900 text-3xl w-[1ch]">Order Confirmed!</h2>
+      <p>we hope you enjoy your food!</p>
+      <div class="order-summary-confirm">
+        <!-- Order summary will be dynamically inserted here -->
+      </div>
+      <p class="text-rose-500 flex justify-between w-full mt-6">
+        <span>Order Total</span>
+        <span class="total-price text-xl font-bold">$00.00</span>
+
+      </p>
+          <button class="w-full bg-red text-rose-100 font-medium py-3 rounded-full 
+          transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105
+           active:scale-95 start-new-order-btn">
+            Start New Order
+          </button>
+
+    </section>
+  </main>
+<script src="./index.js"></script>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Elmo-Sera</a>.
+  </footer>
+</body>
+</html>
