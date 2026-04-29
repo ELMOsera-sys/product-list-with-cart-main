@@ -262,20 +262,24 @@ function renderCart(waitingData){
     }
   });
 
-  startNewOrderBtn.addEventListener("click",()=>{
-    renderCart(recycledData);
-    stateArray=[];
-    checkCart();
+  startNewOrderBtn.addEventListener("click", () => {
+  confirmationSection.classList.add("animate__animated", "animate__hinge");
+
+  confirmationSection.addEventListener("animationend", () => {
+    confirmationSection.classList.remove("animate__animated", "animate__hinge");
     confirmationSection.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
-    cartSelected.innerHTML="";
-    orderSummary.innerHTML="";
-    totalNumber.textContent="0";
-    totalPrice.forEach(price=>{
-      price.textContent="$0.00";
+    renderCart(recycledData);
+    stateArray = [];
+    checkCart();
+    cartSelected.innerHTML = "";
+    orderSummary.innerHTML = "";
+    totalNumber.textContent = "0";
+    totalPrice.forEach(price => {
+      price.textContent = "$0.00";
     });
-    
-  });
+  }, { once: true });
+});
 
 
 
