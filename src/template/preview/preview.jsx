@@ -26,7 +26,7 @@ function RenderPreview({totalItems, totalPrice, decrement,setConfirmation, data}
       </div>
       </div>
         <div className="confirm-btn w-full flex flex-col items-center gap-2  ">
-          <p className="text-rose-500 before:content-[url('./assets/images/icon-carbon-neutral.svg')]
+          <p className="text-rose-500 before:content-[url('/assets/images/icon-carbon-neutral.svg')]
            md:bg-white md:p-6">
             this is a <span className="text-rose-900 font-medium">carbon neutral</span> delivery</p>
           <button className="w-[80%] bg-red text-rose-100 font-medium py-3 rounded-full 
