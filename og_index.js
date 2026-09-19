@@ -53,41 +53,7 @@ function renderCart(waitingData){
             },name,category,price
         })=>{
             html1+=`
-            <div class=" flex flex-col gap-6 " data-thumbnail="${thumbnail}">
-        <div class="presentation-image rounded-xl overflow-hidden relative has-[.clicked]:border-3
-         has-[.clicked]:border-red">
-          <picture>
-            <source media="(min-width: 768px)" srcset="${desktop}">
-            <source media="(min-width: 480px)" srcset="${tablet}">
-            <img src="${mobile}" alt="Waffle with Berries" 
-            class="w-full h-auto ">
-          </picture>
-          <button class="w-[40%] md:left-[20%] md:w-[60%] bg-white border border-rose-300 font-medium 
-          rounded-full before:content-[url('./assets/images/icon-add-to-cart.svg')] flex items-center
-           gap-2 justify-center h-[40px] absolute left-[30%] top-[85%]
-           transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105
-           active:scale-95 hover:border-3 hover:border-red add-to-cart-btn">
-           Add to Cart
-          </button>
-          <p class="w-[40%] bg-red flex items-center justify-between px-4 rounded-full h-[40px] 
-          absolute left-[30%] top-[85%] quantity-controls hidden quantity-controls">
-            <span data-value="less" 
-            class="border-2 border-white rounded-full p-1
-            transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105
-           active:scale-95 hover:bg-white text-red group less"><img src="./assets/images/icon-decrement-quantity.svg" class="group-hover:bg-red" alt="Minus"></span>
-            <span class="item-number text-white">0</span>
-            <span data-value="more"
-            class="border-2 border-white rounded-full p-1
-            transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105
-           active:scale-95 hover:bg-white text-red group more"><img src="./assets/images/icon-increment-quantity.svg" class="group-hover:bg-red" alt="Plus"></span>
-          </p>
-        </div>
-        <div class="presentatiion-text flex flex-col gap-2">
-          <p class="category text-rose-900">${category}</p>
-          <h2 class="name text-rose-900 font-medium">${name}</h2>
-          <p class="price text-red font-bold">$${price.toFixed(2)}</p>
-        </div>
-      </div>
+            
             `
         }
         )
@@ -127,41 +93,9 @@ function renderCart(waitingData){
             itemNumber.textContent=number;
 
             html2=`
-                 <div class="cart-items w-full flex gap-4 flex-col item-html2-${safeName}">
-          <div class="w-full flex items-start">
-            <h2 class="variete-name-special-cart text-rose-900 font-medium ">$${name}</h2>
-          </div>
-          <div class="w-full flex justify-between px-6">
-            <p class="flex gap-6">
-              <span class="item-number text-red">${number}x</span>
-              <span class="all-price flex gap-3">
-                <span class="variete-price text-rose-400">@$${price.toFixed(2)}</span>
-                <span class="total-price-by-items text-rose-500">$${(number * price).toFixed(2)}</span>
-              </span>
-            </p>
-            <button class="remove-item-btn border-2 border-rose-400
-            rounded-full p-1 
-            transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105
-           active:scale-95"><img src="./assets/images/icon-remove-item.svg" alt="Remove"></button>
-          </div>
-        </div>`;
+                `;
 
-         html3=`<div class="w-full flex justify-between px-6 gap-4 items-center item-html3-${safeName}">
-          <img src="${thumbnail}" alt="=${category} Thumbnail" class="w-[60px]
-        rounded-lg ">
-              <p class="flex gap-6 items-center">
-                <span class="flex flex-col gap-2">
-                  <span class="text-rose-500">
-                  ${name}
-                  </span>
-                  <span class="all-price flex gap-3">
-                    <span class="item-number text-red">${number}x</span>
-                    <span class="variete-price text-rose-400">@$${price.toFixed(2)}</span>
-                  </span>
-                </span>
-                <span class="total-price-by-items text-rose-500">$${(number * price).toFixed(2)}</span>
-              </p>
-        </div>`;
+         html3=``;
 
 
             cartSelected.innerHTML+=html2;

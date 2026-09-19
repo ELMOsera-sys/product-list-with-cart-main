@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+    --color-red: hsl(14, 86%, 42%);
+    --color-green: hsl(159, 69%, 38%);
+
+    --color-rose-50: hsl(20, 50%, 98%);
+    --color-rose-100: hsl(13, 31%, 94%);
+    --color-rose-300: hsl(14, 25%, 72%);
+    --color-rose-400: hsl(7, 20%, 60%);
+    --color-rose-500: hsl(12, 20%, 44%);
+    --color-rose-900: hsl(14, 65%, 9%);
+
+    --font-sans: "Red Hat Text", sans-serif;
+}
+
+@layer utilities {
+    .text-red {
+        color: var(--color-red);
+    }
+
+    .bg-red {
+        background-color: var(--color-red);
+    }
+
+    .text-green {
+        color: var(--color-green);
+    }
+
+    .bg-green {
+        background-color: var(--color-green);
+    }
+
+    .text-rose-50 {
+        color: var(--color-rose-50);
+    }
+
+    .bg-rose-50 {
+        background-color: var(--color-rose-50);
+    }
+
+    .text-rose-100 {
+        color: var(--color-rose-100);
+    }
+
+    .bg-rose-100 {
+        background-color: var(--color-rose-100);
+    }
+
+    .text-rose-300 {
+        color: var(--color-rose-300);
+    }
+
+    .bg-rose-300 {
+        background-color: var(--color-rose-300);
+    }
+
+    .text-rose-400 {
+        color: var(--color-rose-400);
+    }
+
+    .bg-rose-400 {
+        background-color: var(--color-rose-400);
+    }
+
+    .text-rose-500 {
+        color: var(--color-rose-500);
+    }
+
+    .bg-rose-500 {
+        background-color: var(--color-rose-500);
+    }
+
+    .text-rose-900 {
+        color: var(--color-rose-900);
+    }
+
+    .bg-rose-900 {
+        background-color: var(--color-rose-900);
+    }
+}
+
