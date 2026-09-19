@@ -11,7 +11,7 @@ export const DataProvider = ({ children }) => {
   ()=>{
     async function fetchData(){
       try{
-        const response= await fetch("../data.json");
+        const response= await fetch("data.json");
         const data= await response.json();
 
         const dataWithId=data.map((item,index) => ({ ...item,id: index , count: 0 }));
