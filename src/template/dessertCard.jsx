@@ -16,7 +16,7 @@ function RenderDessertCard({image, category, name, price,id , increment, decreme
 
         <button
           className="w-[40%] md:left-[20%] md:w-[60%] bg-white border border-rose-300 
-          font-medium rounded-full before:content-[url('assets/images/icon-add-to-cart.svg')] 
+          font-medium rounded-full before:content-[url('./assets/images/icon-add-to-cart.svg')] 
           flex items-center gap-2 justify-center h-[40px] absolute left-[30%] bottom-0 translate-y-1/2 
           transform duration-300 ease-in-out hover:cursor-pointer hover:scale-105 active:scale-95 
           hover:border-3 hover:border-red z-10"
